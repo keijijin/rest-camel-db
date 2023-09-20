@@ -1,2 +1,30 @@
+# Select All Users
 GET http://localhost:8088/api/users/
 Accept:application/json
+
+### ユーザーを挿入する（POST /users）:
+POST http://localhost:8088/api/users
+Content-Type: application/json
+
+{
+    "first_name": "Keiji",
+    "last_name": "Jin",
+    "email": "kjin@redhat.com"
+}
+
+### 指定されたIDのユーザーを取得する（GET /users/{id}）:
+GET http://localhost:8088/api/users/1
+
+### 指定されたIDのユーザー情報を更新する（PUT /users）:
+PUT http://localhost:8088/api/users
+Content-Type: application/json
+
+{
+    "id": 6,
+    "first_name": "Keiji",
+    "last_name": "Jin",
+    "email": "keijijin@gmail.com"
+}
+
+### 指定されたIDのユーザーを削除する（DELETE /users/{id}）:
+DELETE http://localhost:8088/api/users/5
